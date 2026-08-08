@@ -373,6 +373,13 @@ section {
 /* ---------- Reasons (Home) ---------- */
 .reasons {
   border-top: 1px solid var(--border-hairline);
+  padding-top: 80px;
+}
+
+@media (min-width: 768px) {
+  .reasons {
+    padding-top: 120px;
+  }
 }
 
 .reasons-grid {
