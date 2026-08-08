@@ -474,6 +474,11 @@ section {
   text-align: left;
 }
 
+.cta-section .btn-primary {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 /* ---------- Contact ---------- */
 .contact-block {
   margin-bottom: 32px;
