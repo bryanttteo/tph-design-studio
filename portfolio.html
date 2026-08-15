@@ -5,95 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — TPH Design Studio</title>
 <link rel="stylesheet" href="styles.css">
-<style>
-  /* ── Portfolio tab bar ── */
-  .portfolio-tabs-wrapper {
-    border-bottom: 1px solid var(--border-hairline);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .portfolio-tabs-wrapper::-webkit-scrollbar { display: none; }
-
-  .portfolio-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    min-width: max-content;
-    padding: 0 var(--margin-mobile);
-  }
-
-  @media (min-width: 768px) {
-    .portfolio-tabs {
-      padding: 0 var(--margin-desktop);
-      min-width: 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  .tab-btn {
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--ink-subtle);
-    padding: 16px 20px 14px;
-    white-space: nowrap;
-    transition: color 0.2s ease, border-color 0.2s ease;
-    position: relative;
-    bottom: -1px;
-  }
-
-  .tab-btn:hover {
-    color: var(--dark-slate);
-  }
-
-  .tab-btn.is-active {
-    color: var(--terracotta);
-    border-bottom-color: var(--terracotta);
-    font-weight: 600;
-  }
-
-  /* ── Gallery panels ── */
-  .portfolio-panel {
-    display: none;
-    opacity: 0;
-    animation: panelFadeIn 0.35s ease forwards;
-  }
-
-  .portfolio-panel.is-active {
-    display: block;
-  }
-
-  @keyframes panelFadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .portfolio-panel h2 {
-    margin-bottom: 24px;
-  }
-
-  .portfolio-tabs-section {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .portfolio-panel-section {
-    padding-top: 48px;
-  }
-
-  @media (min-width: 768px) {
-    .portfolio-panel-section {
-      padding-top: 64px;
-    }
-  }
-</style>
 </head>
 <body>
 
@@ -119,93 +30,73 @@
     <h1 class="headline-lg">Portfolio</h1>
   </section>
 
-  <!-- Tab bar -->
-  <section class="portfolio-tabs-section">
-    <div class="portfolio-tabs-wrapper">
-      <div class="portfolio-tabs" role="tablist" aria-label="Portfolio projects">
-        <button class="tab-btn is-active" role="tab" aria-selected="true"  aria-controls="panel-cq"    id="tab-cq">Clark Quay</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-sccci" id="tab-sccci">SCCCI</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-pst"   id="tab-pst">Peck San Theng</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-mbfc"  id="tab-mbfc">MBFC</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-om"    id="tab-om">Mandarin Orchard</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-tcmh"  id="tab-tcmh">Thong Chai</button>
-        <button class="tab-btn"           role="tab" aria-selected="false" aria-controls="panel-johor" id="tab-johor">Johor Puteri Harbour</button>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Clark Quay</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/cq1.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq2.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq3.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq4.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq5.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq6.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/cq7.jpg" alt="alt text"></figure>
     </div>
   </section>
 
-  <!-- Gallery panels -->
-  <section class="portfolio-panel-section container">
-
-    <div id="panel-cq" class="portfolio-panel is-active" role="tabpanel" aria-labelledby="tab-cq">
-      <h2 class="headline-md">Clark Quay</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/cq1.jpg" alt="Clark Quay architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/cq2.jpg" alt="Clark Quay architectural model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/cq3.jpg" alt="Clark Quay architectural model, view 3"></figure>
-        <figure class="portfolio-card"><img src="images/cq4.jpg" alt="Clark Quay architectural model, view 4"></figure>
-        <figure class="portfolio-card"><img src="images/cq5.jpg" alt="Clark Quay architectural model, view 5"></figure>
-        <figure class="portfolio-card"><img src="images/cq6.jpg" alt="Clark Quay architectural model, view 6"></figure>
-        <figure class="portfolio-card"><img src="images/cq7.jpg" alt="Clark Quay architectural model, view 7"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Singapore Chinese Chamber of Commerce and Industry (SCCCI)</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/sccci1.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/sccci2.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/sccci3.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/sccci4.jpeg" alt="alt text"></figure>
     </div>
+  </section>
 
-    <div id="panel-sccci" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-sccci">
-      <h2 class="headline-md">Singapore Chinese Chamber of Commerce and Industry (SCCCI)</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/sccci1.jpeg" alt="SCCCI architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/sccci2.jpeg" alt="SCCCI architectural model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/sccci3.jpeg" alt="SCCCI architectural model, view 3"></figure>
-        <figure class="portfolio-card"><img src="images/sccci4.jpeg" alt="SCCCI architectural model, view 4"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Kwong Wai Siew Peck San Theng</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/pst1.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/pst2.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/pst3.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/pst4.jpeg" alt="alt text"></figure>
     </div>
+  </section>
 
-    <div id="panel-pst" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-pst">
-      <h2 class="headline-md">Kwong Wai Siew Peck San Theng</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/pst1.jpg" alt="Peck San Theng architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/pst2.jpg" alt="Peck San Theng architectural model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/pst3.jpg" alt="Peck San Theng architectural model, view 3"></figure>
-        <figure class="portfolio-card"><img src="images/pst4.jpeg" alt="Peck San Theng architectural model, view 4"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Marina Bay Financial Centre (MBFC)</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/mbfc1.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/mbfc2.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/mbfc3.jpg" alt="alt text"></figure>
     </div>
+  </section>
 
-    <div id="panel-mbfc" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-mbfc">
-      <h2 class="headline-md">Marina Bay Financial Centre (MBFC)</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/mbfc1.jpg" alt="MBFC architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/mbfc2.jpg" alt="MBFC architectural model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/mbfc3.jpg" alt="MBFC architectural model, view 3"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Mandarin Orchard</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/om1.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/om2.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/om3.jpeg" alt="alt text"></figure>
     </div>
+  </section>
 
-    <div id="panel-om" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-om">
-      <h2 class="headline-md">Mandarin Orchard</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/om1.jpg" alt="Mandarin Orchard architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/om2.jpeg" alt="Mandarin Orchard architectural model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/om3.jpeg" alt="Mandarin Orchard architectural model, view 3"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Singapore Thong Chai Medical Institution</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/tcmh1.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/tcmh2.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/tcmh3.jpeg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/tcmh4.jpg" alt="alt text"></figure>
     </div>
+  </section>
 
-    <div id="panel-tcmh" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-tcmh">
-      <h2 class="headline-md">Singapore Thong Chai Medical Institution</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/tcmh1.jpeg" alt="Thong Chai Medical Institution model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/tcmh2.jpeg" alt="Thong Chai Medical Institution model, view 2"></figure>
-        <figure class="portfolio-card"><img src="images/tcmh3.jpeg" alt="Thong Chai Medical Institution model, view 3"></figure>
-        <figure class="portfolio-card"><img src="images/tcmh4.jpg"  alt="Thong Chai Medical Institution model, view 4"></figure>
-      </div>
+  <section class="portfolio-group container">
+    <h2 class="headline-md">Johor Puteri Harbour</h2>
+    <div class="portfolio-grid">
+      <figure class="portfolio-card"><img src="images/JohorPuteriHarbour1.jpg" alt="alt text"></figure>
+      <figure class="portfolio-card"><img src="images/JohorPuteriHarbour2.jpg" alt="alt text"></figure>
     </div>
-
-    <div id="panel-johor" class="portfolio-panel" role="tabpanel" aria-labelledby="tab-johor">
-      <h2 class="headline-md">Johor Puteri Harbour</h2>
-      <div class="portfolio-grid">
-        <figure class="portfolio-card"><img src="images/JohorPuteriHarbour1.jpg" alt="Johor Puteri Harbour architectural model, view 1"></figure>
-        <figure class="portfolio-card"><img src="images/JohorPuteriHarbour2.jpg" alt="Johor Puteri Harbour architectural model, view 2"></figure>
-      </div>
-    </div>
-
   </section>
 
   <section class="cta-section container">
@@ -232,38 +123,5 @@
 </footer>
 
 <script src="nav.js"></script>
-<script>
-  (function () {
-    var tabs   = document.querySelectorAll('.tab-btn');
-    var panels = document.querySelectorAll('.portfolio-panel');
-
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        // Deactivate all
-        tabs.forEach(function (t) {
-          t.classList.remove('is-active');
-          t.setAttribute('aria-selected', 'false');
-        });
-        panels.forEach(function (p) {
-          p.classList.remove('is-active');
-        });
-
-        // Activate clicked tab
-        tab.classList.add('is-active');
-        tab.setAttribute('aria-selected', 'true');
-
-        var targetId = tab.getAttribute('aria-controls');
-        var panel = document.getElementById(targetId);
-        if (panel) {
-          // Re-trigger CSS animation
-          panel.style.animation = 'none';
-          panel.offsetHeight; // force reflow
-          panel.style.animation = '';
-          panel.classList.add('is-active');
-        }
-      });
-    });
-  })();
-</script>
 </body>
 </html>
