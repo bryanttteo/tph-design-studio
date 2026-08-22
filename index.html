@@ -29,8 +29,15 @@
 
   <main>
     <section class="hero container">
-      <div class="hero-media">
-        <img src="images/cq8.jpeg" alt="Clarke Quay">
+      <div class="hero-media hero-carousel" id="heroCarousel">
+        <img src="images/cq8.jpeg"  alt="Clarke Quay"              class="carousel-slide is-active">
+        <img src="images/cq9.jpeg"  alt="Clarke Quay model detail" class="carousel-slide">
+        <img src="images/mbfc1.jpg" alt="Marina Bay Financial Centre model" class="carousel-slide">
+        <div class="carousel-dots" id="carouselDots">
+          <button class="carousel-dot is-active" aria-label="Slide 1"></button>
+          <button class="carousel-dot" aria-label="Slide 2"></button>
+          <button class="carousel-dot" aria-label="Slide 3"></button>
+        </div>
       </div>
       <div class="hero-content">
         <h1 class="headline-xl">TPH Design Studio</h1>
@@ -82,6 +89,34 @@
   </footer>
 
   <script src="nav.js"></script>
+  <script>
+    (function () {
+      const slides = document.querySelectorAll('#heroCarousel .carousel-slide');
+      const dots   = document.querySelectorAll('#carouselDots .carousel-dot');
+      let current  = 0;
+      let timer;
+
+      function goTo(index) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+      }
+
+      function next() { goTo(current + 1); }
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          clearInterval(timer);
+          goTo(i);
+          timer = setInterval(next, 4000);
+        });
+      });
+
+      timer = setInterval(next, 4000);
+    })();
+  </script>
 </body>
 
 </html>

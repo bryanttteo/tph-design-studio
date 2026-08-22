@@ -354,11 +354,54 @@ section {
   margin-bottom: 40px;
 }
 
-.hero-media img {
+/* Carousel: stack slides and crossfade */
+.hero-carousel {
+  position: relative;
+}
+
+.hero-media img,
+.carousel-slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.9s ease;
 }
+
+.carousel-slide.is-active {
+  opacity: 1;
+  position: relative; /* keeps the container height */
+}
+
+/* Dot indicators */
+.carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dot.is-active {
+  background: #fff;
+  transform: scale(1.35);
+}
+
 
 .hero-content .headline-xl {
   margin-bottom: 16px;
