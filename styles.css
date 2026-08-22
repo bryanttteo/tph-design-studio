@@ -371,13 +371,19 @@ section {
 }
 
 @keyframes carouselZoom {
-  from { transform: scale(1);    }
-  to   { transform: scale(1.08); }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
 }
 
 .carousel-slide.is-active {
   opacity: 1;
-  position: relative; /* keeps the container height */
+  position: relative;
+  /* keeps the container height */
   animation: carouselZoom 4.8s ease-out forwards;
 }
 
@@ -428,7 +434,7 @@ section {
 
 @media (min-width: 768px) {
   .reasons {
-    padding-top: 120px;
+    padding-top: 60px;
   }
 }
 
