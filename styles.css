@@ -370,10 +370,17 @@ section {
   transition: opacity 0.9s ease;
 }
 
+@keyframes carouselZoom {
+  from { transform: scale(1);    }
+  to   { transform: scale(1.08); }
+}
+
 .carousel-slide.is-active {
   opacity: 1;
   position: relative; /* keeps the container height */
+  animation: carouselZoom 4.8s ease-out forwards;
 }
+
 
 /* Dot indicators */
 .carousel-dots {
